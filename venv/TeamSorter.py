@@ -5,6 +5,7 @@ import pandas as pd
 from TeamSorterUI import TeamSorterUI
 
 
+
 class TeamSorter:
 
     numberOfTeams = 0
@@ -39,11 +40,10 @@ class TeamSorter:
 
                 dataListToCSV.append([])
 
-
             preprocessedDataToWrite = pd.DataFrame(dataListToCSV, columns=headerList)
 
             preprocessedDataToWrite.to_csv('generatedTeams.csv', index= False)
-            preprocessedDataToWrite.to_csv('generatedTeamsBACKUP.csv', index= False)
+            # preprocessedDataToWrite.to_csv('generatedTeamsBACKUP.csv', index= False)
 
         # This function filters contents that are important from the player information
         def dataCustomizer(playerInformation):
@@ -71,8 +71,6 @@ class TeamSorter:
             TeamSorter.finalTeamsDictionary[('Team '+ str(team+1))] = []
 
 
-
-
         teamNumber = 1
         # Assign boys
         for male in TeamSorter.malePlayersArraySortedBySkills:
@@ -90,10 +88,6 @@ class TeamSorter:
             teamNumber = teamNumber + 1
 
         writeToCSV(numberOfTeams)
-
-
-
-
 
 
 
@@ -148,11 +142,16 @@ class TeamSorter:
             print("Invalid option to sort/ Option to sort is not defined/ Error in reading saved dictionary")
             print(e.__class__, ' occured')
 
+    def run(optionToSort_, numberOfTeams_, isRandom_, fixedRandom_):
+
+        if fixedRandom_:
+            random.seed(42)
+
+        TeamSorter.fixTeams(optionToSort=optionToSort_, numberOfTeams=numberOfTeams_, isRandom=isRandom_)
 
 
 
 
-random.seed(42)
 #TeamSorter.fixTeams(optionToSort= 'experience', numberOfTeams=5, isRandom= True)
 #print(CSVReader.dictionaryPlayerSkillLevel)
 #print(TeamSorter.finalTeamsDictionary)
