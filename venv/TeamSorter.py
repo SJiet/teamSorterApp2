@@ -152,9 +152,8 @@ class TeamSorter:
 
 
 
-
 random.seed(42)
-TeamSorter.fixTeams(optionToSort= 'experience', numberOfTeams=5, isRandom= True)
+#TeamSorter.fixTeams(optionToSort= 'experience', numberOfTeams=5, isRandom= True)
 #print(CSVReader.dictionaryPlayerSkillLevel)
 #print(TeamSorter.finalTeamsDictionary)
 #print(tuple(TeamSorter.finalTeamsDictionary.keys()))

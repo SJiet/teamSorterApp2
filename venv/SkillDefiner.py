@@ -3,6 +3,7 @@ import pandas as pd
 from csv import reader
 import enum
 from multipledispatch import dispatch
+from TeamSorterUI import TeamSorterUI
 
 
 # ----------------------------------------------------------------------------------------------------------------------------------
@@ -11,25 +12,25 @@ from multipledispatch import dispatch
 
 class SkillDefiner:
     # Skill 1 - Experience:
-    experienceLevel1 = "1"
-    experienceLevel2 = "2"
-    experienceLevel3 = "3"
-    experienceLevel4 = "4"
-    experienceLevel5 = "5"
+    experienceLevel1 = TeamSorterUI.experienceLevel1
+    experienceLevel2 = TeamSorterUI.experienceLevel2
+    experienceLevel3 = TeamSorterUI.experienceLevel3
+    experienceLevel4 = TeamSorterUI.experienceLevel4
+    experienceLevel5 = TeamSorterUI.experienceLevel5
     
     # Skill 2 - Throws
-    throwingLevel1 = "I can barely hold a disc"
-    throwingLevel2  = "I can only do short distance backhand"
-    throwingLevel3  = "I\'m able to do both backhand and forehand throws"
-    throwingLevel4  = "I can huck"
-    throwingLevel5  = "I can huck, hammer, break. Call me a solid handler"
+    throwingLevel1 = TeamSorterUI.throwingLevel1
+    throwingLevel2  = TeamSorterUI.throwingLevel2
+    throwingLevel3  = TeamSorterUI.throwingLevel3
+    throwingLevel4  = TeamSorterUI.throwingLevel4
+    throwingLevel5  = TeamSorterUI.throwingLevel5
     
     # Skill 3 - Speed
-    speedLevel1 = "I can huck, hammer, break. Call me a solid handler"
-    speedLevel2 = "I can huck"
-    speedLevel3 = "I\'m able to do both backhand and forehand throws"
-    speedLevel4 = "I can only do short distance backhand"
-    speedLevel5 = "I can barely hold a disc"
+    speedLevel1 = TeamSorterUI.speedLevel1
+    speedLevel2 = TeamSorterUI.speedLevel1
+    speedLevel3 = TeamSorterUI.speedLevel1
+    speedLevel4 = TeamSorterUI.speedLevel1
+    speedLevel5 = TeamSorterUI.speedLevel1
 
 
     # Functions

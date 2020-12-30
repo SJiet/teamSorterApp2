@@ -3,8 +3,10 @@ import pandas as pd
 from csv import reader
 import enum
 from SkillDefiner import SkillDefiner
+from TeamSorterUI import TeamSorterUI
 import random
 import operator
+
 
 # --------------------------------------------------------------------------------------------------------------------------
 # CSV READER
@@ -14,17 +16,17 @@ class CSVReader:
 
     class DataColumnsFromCSV(enum.Enum):
         # Identifies index of each data found in the csv. The variable name is a template
-        playerName = 1
-        ic = 2
-        age = 3
-        gender = 4
-        contactNumber = 5
-        emergencyContact = 6
-        email = 7
-        experience = 8
-        throwingSkills = 9
-        speed = 10
-        shirtSize = 11
+        playerName = TeamSorterUI.playerName
+        ic = TeamSorterUI.ic
+        age = TeamSorterUI.age
+        gender = TeamSorterUI.gender
+        contactNumber = TeamSorterUI.contactNumber
+        emergencyContact = TeamSorterUI.emergencyContact
+        email = TeamSorterUI.email
+        experience = TeamSorterUI.experience
+        throwingSkills = TeamSorterUI.throwingSkills
+        speed = TeamSorterUI.speed
+        shirtSize = TeamSorterUI.shirtSize
     
     
     # Creates a dictionary to store "name" (key) and "information" (value)
@@ -40,7 +42,7 @@ class CSVReader:
     # Private helper method
     def __readCsvFileLoadPlayerInformation():
         # Read csv
-        dataset = pd.read_csv("C:/Users/Admin/Documents/Python_download_8-5/teamSorter/Melaka Christmas Ultimate Frisbee 2020 (Registration Form) (Responses) - Form responses 1 (2).csv")
+        dataset = pd.read_csv(TeamSorterUI.path)
         df = pd.DataFrame(dataset)
     
         # Obtain vital data from each row

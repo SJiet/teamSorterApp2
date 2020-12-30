@@ -1,10 +1,22 @@
+from TeamSorter import TeamSorter
 
 class TeamSorterUI:
     # CSVReader.py
 
-    path = ""
+    path = "C:/Users/Admin/Documents/Python_download_8-5/teamSorter/Melaka Christmas Ultimate Frisbee 2020 (Registration Form) (Responses) - Form responses 1 (2).csv"
 
-    csvColumnIndex = ""
+    playerName = 1
+    ic = 2
+    age = 3
+    gender = 4
+    contactNumber = 5
+    emergencyContact = 6
+    email = 7
+    experience = 8
+    throwingSkills = 9
+    speed = 10
+    shirtSize = 11
+
 
 
 
@@ -33,3 +45,7 @@ class TeamSorterUI:
 
 
     # TeamSorter.py
+
+    def run():
+        TeamSorter.fixTeams(optionToSort= 'experience', numberOfTeams=5, isRandom= True)
+
