@@ -40,10 +40,11 @@ class TeamSorter:
 
                 dataListToCSV.append([])
 
+            print(dataListToCSV)
             preprocessedDataToWrite = pd.DataFrame(dataListToCSV, columns=headerList)
 
             preprocessedDataToWrite.to_csv('generatedTeams.csv', index= False)
-            # preprocessedDataToWrite.to_csv('generatedTeamsBACKUP.csv', index= False)
+            preprocessedDataToWrite.to_csv('generatedTeamsBACKUP.csv', index= False)
 
         # This function filters contents that are important from the player information
         def dataCustomizer(playerInformation):
